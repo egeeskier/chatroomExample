@@ -1,0 +1,27 @@
+.height-10{
+  height: 10%;
+}
+
+.height-80{
+  height: 10%;
+
+}
+
+.mt-10{
+   top:10%;
+}
+
+.content{
+  background-color: #16EA9A;
+}
+
+.overflow{
+  overflow: scroll;
+}
+
+body{
+  height: 100%
+  width: 100%;
+  margin:0;
+  padding:0;
+}

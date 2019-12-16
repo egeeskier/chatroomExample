@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Chatroom</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="js/jquery.min.js"> </script>
+  <script src="js/bootstrap.min.js"> </script>
+  <script src="js/popper.min.js"> </script>
+  <script src="js/index.js"> </script>
+
+</head>
+
+<body>
+
+
+  <div class="modal" id="nameModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">
+            enter your name for the chatroom or leave blank to be anonymous
+          </h5>
+        </div>
+        <div class="modal-body">
+          <input type="text" placeholder="enter your name" clas="form-conr">
+       </div>
+
+       <div class="modal-footer">
+         <button class="btn btn-primary text-white" id="nameButton"">
+          enter
+         </button>
+
+       </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="container-fluid">
+    <div class="row position-absolute height-10 bg-dark text-light w-100">
+         <div class="col-12 col-sm-9 d-flex justify-content-center align-items-center">
+              <span id ="cat">Chat</span>
+         </div>
+         <div class="col-12 col-sm-3 font-italic d-flex justify-content-center align-items-center">
+             <<span id ="population">0</span> people online
+         </div>
+    </div>
+
+    <div class="row">
+       <div class="col overflow height-80 position-absolute mt-10 content">
+
+       </div>
+    </div>
+
+  </div>
+
+
+</body>
+
+</html>
