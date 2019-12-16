@@ -9,5 +9,5 @@
     "express": "^4.15.2",
     "socket.io": "2.0.4"
   },
-  "author": "Vinayak Sinha"
+  "author": "Ege Eskier"
 }
