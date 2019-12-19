@@ -1,2 +1,2 @@
 # chatroom_template
-Chatroom application
+A chatroom application for computer networks course
