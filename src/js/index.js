@@ -48,10 +48,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         let container = document.createElement("div");
         let text = document.createElement("span");
-        var messageTime = new Date();
-        console.log(messageTime)
+        //var messageTime = new Date();
+        //console.log(messageTime)
         let time = document.createElement("span")
-        time.innerHTML = messageTime
+        time.innerHTML = displayTime()
         container.classList.add("mt-2", "text-right");
         text.innerHTML = msg.value;
         text.classList.add("bg-dark", "text-light", "px-1", "py-1", "rounded");
@@ -64,13 +64,18 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function recievedMessage(rmsg, rname) {
-        let container = document.createElement("div");
-        let rtext = document.createElement("span");
-        rtext.innerHTML = "<strong>" + rname + "</strong>" + ": " + rmsg;
-        rtext.classList.add("bg-dark", "text-light", "px-1", "py-1", "rounded");
-        container.classList.add("text-left", "mt-2");
-        container.appendChild(rtext);
-        msgBox.appendChild(container);
+       let time = document.createElement("span");
+       time.innerHTML = displayTime();
+       time.classList.add("bg-primary", "text-light", "px-1", "py-1","rounded");
+
+       let container = document.createElement("div");
+       let rtext = document.createElement("span");
+       rtext.innerHTML = "<strong>" + rname + "</strong>" + ": " + rmsg;
+       rtext.classList.add("bg-dark", "text-light", "px-1", "py-1", "rounded");
+       container.classList.add("text-left", "mt-2");
+       container.appendChild(time);
+       container.appendChild(rtext);
+       msgBox.appendChild(container);
     }
 
     //send button clicked
@@ -82,5 +87,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    function displayTime(){
+      var date1 = new Date();
+      var time = date1.getHours()+ ":" + date1.getMinutes();
+      return time;
+    }
 
 })

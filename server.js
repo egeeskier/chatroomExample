@@ -9,7 +9,7 @@ http.listen(port, function () {
     console.log('listening on:' + port);
 });
 
-const rooms = { movies: 0, games: 0, books: 0, music: 0 }
+const rooms = { CS100:0,CS101:0,CS103:0,CS112:0,CS201:0,CS202:0,CS320:0,CS321:0,CS397:0,CS409:0,CS410:0,CS418:0,CS442:0,CS447:0,CS450:0,CS454:0}
 
 io.on('connection', function (socket) {
     socket.on('joinRoom', (roomName) => {
@@ -23,7 +23,7 @@ io.on('connection', function (socket) {
             updateRoomCount(roomName, roomCount)
         }
         else {
-            socket.emit('noRoom') // nno room mesaji gonderiyor
+            socket.emit('noRoom') // no room mesaji gonderiyor
         }
     })
 
@@ -33,7 +33,7 @@ io.on('connection', function (socket) {
     socket.on('disconnecting', () => {
         console.log('in disconnect', Object.keys(socket.rooms))
         if (Object.keys(socket.rooms).length == 2) {
-            console.log('socket in a room')
+            console.log('a user disconnected from the room')
             let roomName = Object.values(socket.rooms)[1]
             console.log(roomName)
             let roomCount = rooms[roomName]
